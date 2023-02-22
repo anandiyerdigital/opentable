@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+.env
+.env.local
 
 # testing
 /coverage
@@ -34,3 +36,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# @QBdeX5uJrsi1F0k
