@@ -3,11 +3,15 @@
 import React from 'react'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import { parseJsonSourceFileConfigFileContent } from 'typescript'
+
 
 const SearchBar = () => {
 
     const router = useRouter()
+   
     const [location, setLocation] = useState('')
+   
   return (
     <div className="text-left text-lg py-3 m-auto flex justify-center">
     <input
@@ -20,11 +24,13 @@ const SearchBar = () => {
     <button className="rounded bg-red-600 px-9 py-2 text-white" onClick={() => {
       if
       (location) {
-        router.push(`/search`)
+        router.push(`/search?city=${location}`)
+        setLocation('')
       }
     }}>
-      Let's go
+      <p>Let's go</p>
     </button>
+    
   </div>
   )
 }
